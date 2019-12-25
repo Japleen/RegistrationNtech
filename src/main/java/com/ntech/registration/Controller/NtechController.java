@@ -8,29 +8,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 public class NtechController {
 
-    @Autowired
-    RegistrationService registrationService;
+	@Autowired
+	RegistrationService registrationService;
 
-    @GetMapping("/error")
-    public String err() {
-        System.out.println("inside 1");
-        return "No";
-    }
+	@PostMapping(value = "/professional")
+	public void addProfessional(@RequestBody Professional professional) {
+		registrationService.addProfessional(professional);
+	}
 
-    @PostMapping(value="/add" )
-    public void addProfessional(@RequestBody Professional professional) {
-        registrationService.addProfessional(professional);
-    }
-
-    @GetMapping(value="/add" )
-    public List<Professional> fetchProfessionals() {
-        System.out.println("inside");
-        List<Professional> pro = registrationService.fetchProfessionals();
-        if (pro.isEmpty()) {
-            System.out.println("NO RECORDS");
-        }
-        return pro;
-    }
+	@GetMapping(value = "/professional")
+	public List<Professional> fetchProfessionals() {
+		List<Professional> pro = registrationService.fetchProfessionals();
+		return pro;
+	}
 }
