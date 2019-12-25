@@ -10,9 +10,9 @@ public class Professional {
     private String firstName;
     private String lastName;
     private String email;
-    private String phone;
+    private String phoneNumber;
     private String primarySkill;
-    private String secondarySkill;
+    private String profession;
 
     public String getLastName() {
         return lastName;
@@ -30,12 +30,12 @@ public class Professional {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPrimarySkill() {
@@ -46,12 +46,12 @@ public class Professional {
         this.primarySkill = primarySkill;
     }
 
-    public String getSecondarySkill() {
-        return secondarySkill;
+    public String getProfession() {
+        return profession;
     }
 
-    public void setSecondarySkill(String secondarySkill) {
-        this.secondarySkill = secondarySkill;
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 
     public String getFirstName() {
@@ -68,9 +68,9 @@ public class Professional {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
+                ", phone='" + phoneNumber + '\'' +
                 ", primarySkill='" + primarySkill + '\'' +
-                ", secondarySkill='" + secondarySkill + '\'' +
+                ", secondarySkill='" + profession + '\'' +
                 '}';
     }
 }
