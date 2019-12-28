@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public interface RegistrationService {
-    public void addProfessional(Professional professional);
+    public boolean addProfessional(Professional professional);
 
     public List<Professional> fetchProfessionals();
 
