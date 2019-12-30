@@ -26,7 +26,7 @@ public class NtechController {
 		Map map = new HashMap<>();
         map.put("status", status);
         if(status.equals("true")) {
-            map.put("message", "Congratulations!!! You have registered ssuccesfully!");
+            map.put("message", 'You have registered ssuccesfully!");
         }
         else{
                 map.put("message", "You are already registered.");
